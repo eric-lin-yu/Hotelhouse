@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  just camping
+
+  Created by Ericyou on 2021/7/30.
+  
+*/
+
+//英文
+"area and name"="Please enter the area or hotel name";
+"error down"="Please confirm whether the network is abnormal";

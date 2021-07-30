@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Add"; ObjectID = "0Fo-Zb-bj2"; */
+"0Fo-Zb-bj2.text" = "Add";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "3XR-7M-7lg"; */
+"3XR-7M-7lg.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Rate it!"; ObjectID = "3nE-E8-PHb"; */
+"3nE-E8-PHb.normalTitle" = "Rate it!";
+
+/* Class = "UIButton"; normalTitle = "遊客登入"; ObjectID = "4tC-WW-9cn"; */
+"4tC-WW-9cn.normalTitle" = "遊客登入";
+
+/* Class = "UIButton"; normalTitle = "  Facebook login"; ObjectID = "A0O-xi-JiQ"; */
+"A0O-xi-JiQ.normalTitle" = "  Facebook login";
+
+/* Class = "UIButton"; normalTitle = "soso"; ObjectID = "Iz6-hO-3xu"; */
+"Iz6-hO-3xu.normalTitle" = "soso";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L0u-xq-mQ2"; */
+"L0u-xq-mQ2.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Love"; ObjectID = "MRD-iR-vu0"; */
+"MRD-iR-vu0.normalTitle" = "Love";
+
+/* Class = "UIButton"; normalTitle = "Angry"; ObjectID = "NYz-7V-122"; */
+"NYz-7V-122.normalTitle" = "Angry";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OU0-HO-GR6"; */
+"OU0-HO-GR6.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PSj-2Z-F5G"; */
+"PSj-2Z-F5G.text" = "Label";
+
+/* Class = "UILabel"; text = "Subsection Title"; ObjectID = "agm-y5-c0Q"; */
+"agm-y5-c0Q.text" = "Subsection Title";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "dzh-9L-GOV"; */
+"dzh-9L-GOV.text" = "Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hBU-SK-uGn"; */
+"hBU-SK-uGn.text" = "Label";
+
+/* Class = "UILabel"; text = "本圖僅供示意，非當地景色"; ObjectID = "hGM-v8-W7x"; */
+"hGM-v8-W7x.text" = "本圖僅供示意，非當地景色";
+
+/* Class = "UILabel"; text = "Add"; ObjectID = "jmz-Kd-foD"; */
+"jmz-Kd-foD.text" = "Add";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uXu-jN-Vy9"; */
+"uXu-jN-Vy9.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "   Google login"; ObjectID = "ycb-Qs-X7n"; */
+"ycb-Qs-X7n.normalTitle" = "   Google login";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yjs-hT-QT1"; */
+"yjs-hT-QT1.text" = "Label";

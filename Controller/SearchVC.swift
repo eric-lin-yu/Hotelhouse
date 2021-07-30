@@ -31,7 +31,7 @@ class SearchVC: UIViewController, /*UISearchResultsUpdating,*/ UITableViewDataSo
         self.searchTableView.dataSource = self
         //Search View
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        searchController.searchBar.placeholder = "請輸入縣市 or 旅社名稱"
+        searchController.searchBar.placeholder = NSLocalizedString("area and name", comment: "搜尋說明")
         searchController.searchBar.tintColor = UIColor(red: 255, green: 128, blue: 0)
         
         searchTableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -114,7 +114,7 @@ class SearchVC: UIViewController, /*UISearchResultsUpdating,*/ UITableViewDataSo
                 AF.cancelAllRequests()
                 KRProgressHUD.dismiss()
                 print(error)
-                let alert = UIAlertController(title: "", message: "資料下載失敗，請確認您網路是否連線正常！", preferredStyle: .alert)
+                let alert = UIAlertController(title: "", message: NSLocalizedString("error down", comment: ""), preferredStyle: .alert)
                 let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
