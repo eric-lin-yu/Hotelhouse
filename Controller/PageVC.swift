@@ -6,7 +6,7 @@
 //
 
 import UIKit
-protocol walkthroughPageVCDelegate: class {
+protocol walkthroughPageVCDelegate: AnyObject {
     func didUpdatePageIndex(currentIndex: Int)
 }
 

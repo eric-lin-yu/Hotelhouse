@@ -62,7 +62,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     @IBAction func goMapNavigation(_ sender: Any) {
-        let aler = UIAlertController(title: "注意!!", message: "您將會離開此App，並切換至Apple Map導航", preferredStyle: .alert)
+        let aler = UIAlertController(title: NSLocalizedString("Notice!", comment: ""), message: NSLocalizedString("appleMap", comment: ""), preferredStyle: .alert)
         let ok = UIAlertAction(title: "Let's GO!", style: .default) { (gomapNavigation) in
 
             let geocoder = CLGeocoder()
@@ -81,7 +81,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
                 targetMapItem.openInMaps(launchOptions: options)
             }
         }
-        let canel = UIAlertAction(title: "再等等", style: .default, handler: nil)
+        let canel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default, handler: nil)
         aler.addAction(ok)
         aler.addAction(canel)
         self.present(aler, animated: true, completion: nil)

@@ -88,7 +88,7 @@ class SearchDetailTableVC: UIViewController, UITableViewDelegate, UITableViewDat
                 cell.shortTextLabel.shadowColor = .blue
                 cell.selectionStyle = .none
             } else {
-                cell.shortTextLabel.text = "很抱歉，此店家未提供官網"
+                cell.shortTextLabel.text = NSLocalizedString("sorrywebsite", comment: "官網")
                 cell.selectionStyle = .none
             }
             return cell
@@ -109,7 +109,7 @@ class SearchDetailTableVC: UIViewController, UITableViewDelegate, UITableViewDat
                 cell.shortTextLabel.text = searchdetail.spec
                 cell.selectionStyle = .none
             } else {
-                cell.shortTextLabel.text = "很抱歉，此店家未提供床型介紹"
+                cell.shortTextLabel.text = NSLocalizedString("sorrybedtype", comment: "床型介紹")
                 cell.selectionStyle = .none
             }
             return cell
@@ -124,7 +124,7 @@ class SearchDetailTableVC: UIViewController, UITableViewDelegate, UITableViewDat
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DetailSeparatorCell.self), for: indexPath) as! DetailSeparatorCell
             
-            cell.titleLabel.text = "HOW TO GET HERE"
+            cell.titleLabel.text = NSLocalizedString("HOW TO GET HERE", comment: "")
             cell.selectionStyle = .none
             
             return cell
@@ -144,9 +144,9 @@ class SearchDetailTableVC: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let alerts = UIAlertController(title: "提醒您", message: "將會外撥電話至 \(searchdetail.name)", preferredStyle: .alert)
+            let alerts = UIAlertController(title: NSLocalizedString("Remind you", comment: ""), message: NSLocalizedString("Outgoing call to ", comment: "")+"\(searchdetail.name)", preferredStyle: .alert)
             let phone = searchdetail.tel
-            let ok = UIAlertAction(title: "撥打電話", style: .default) { (_) in
+            let ok = UIAlertAction(title: NSLocalizedString("dial number", comment: ""), style: .default) { (_) in
                 if let url = URL(string: "tel:\(phone)") {
                     if UIApplication.shared.canOpenURL(url) {
                         UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -157,7 +157,7 @@ class SearchDetailTableVC: UIViewController, UITableViewDelegate, UITableViewDat
                     print("連結錯誤")
                 }
             }
-            let Wait = UIAlertAction(title: "取消", style: .default, handler: nil)
+            let Wait = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default, handler: nil)
             alerts.addAction(ok)
             alerts.addAction(Wait)
             self.present(alerts, animated: true, completion: nil)

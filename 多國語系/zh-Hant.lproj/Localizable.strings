@@ -9,3 +9,18 @@
 //中文
 "area and name"="請輸入地區 or 旅社名稱";
 "error down"="資料下載失敗，請確認您網路是否連線正常！";
+"sorrywebsite"="很抱歉，此店家未提供官網";
+"sorrybedtype"="很抱歉，此店家未提供床型介紹";
+"HOW TO GET HERE"="詳細地點";
+"Remind you"="提醒您";
+"dial number"="撥打電話";
+"Cancel"="取消";
+"Outgoing call to "="外撥電話至 ";
+"Notice!"="注意！";
+"You will delete this record"="您將會刪除此筆資料";
+"Delete"="刪除";
+"Hey, I found a nice hostel!"="嘿！ 我發現一家不錯的旅社";
+"storeName"="店家名稱： ";
+"address"="地址： ";
+"appDownload"="APP裡面有更多詳細訊息，趕快來下載吧！";
+"appleMap"="您將會離開此App，並切換至Apple Map導航";

@@ -101,8 +101,8 @@ class FavoriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let alert = UIAlertController(title: "注意！", message: "您將會刪除此筆紀錄", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "刪除", style: .destructive) { (cancel) in
+            let alert = UIAlertController(title: NSLocalizedString("Notice!", comment: ""), message: NSLocalizedString("You will delete this record", comment: ""), preferredStyle: .alert)
+            let cancel = UIAlertAction(title: NSLocalizedString("Delete", comment: ""), style: .destructive) { (cancel) in
                 //Core Data刪除
                 let context = CoreDataHelper.shared.managedObjectContext()
                 let fetchRequest = NSFetchRequest<InfoDescription>(entityName: "UserData")
@@ -124,7 +124,7 @@ class FavoriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
                 MyDatas.shared.imageDatas.remove(at: indexPath.row)
                 self.favoriteTableView.deleteRows(at: [indexPath], with: .automatic)
             }
-            let Wait = UIAlertAction(title: "讓我再想想！", style: .default, handler: nil)
+            let Wait = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default, handler: nil)
             alert.addAction(cancel)
             alert.addAction(Wait)
             self.present(alert, animated: true, completion: nil)
@@ -133,10 +133,10 @@ class FavoriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     //往右滑呼叫share
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
-            let str01 = "嘿,我發現一家不錯的旅社！"
-            let nameText = "店家名稱： " + self.favoriteDetail[indexPath.row].name
-            let addText = "地址： " + self.favoriteDetail[indexPath.row].add
-            let str02 = "APP裡面有更多詳細訊息，趕快來下載吧！"
+            let str01 = NSLocalizedString("Hey, I found a nice hostel!", comment: "")
+            let nameText = NSLocalizedString("storeName", comment: "") + self.favoriteDetail[indexPath.row].name
+            let addText = NSLocalizedString("address", comment: "") + self.favoriteDetail[indexPath.row].add
+            let str02 = NSLocalizedString("appDownload", comment: "")
             let str03 = "https://itunes.apple.com/us/app/itunes-u/id1547393444"
             let activityController = UIActivityViewController(activityItems: [str01,nameText,addText, str02,str03], applicationActivities: nil)
             
