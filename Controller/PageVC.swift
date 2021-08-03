@@ -12,10 +12,10 @@ protocol walkthroughPageVCDelegate: AnyObject {
 
 class PageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
-    var pageHeadings = ["輸入框內，填入想前往的縣市地點，按下「搜尋」查詢旅社！",
-                        "喜愛的旅社按下表情「LOVE」圖案，立即收藏至最愛",
-                        "收集所有喜愛的旅社，(右滑)分享給朋友",
-                        "開始使用APP吧！"]
+    var pageHeadings = [NSLocalizedString("search", comment: ""),
+                        NSLocalizedString("love", comment: ""),
+                        NSLocalizedString("like", comment: ""),
+                        NSLocalizedString("start using", comment: "")]
     var pageImages = ["page1","page2","page3","page4"]
     var currentIndex = 0
 

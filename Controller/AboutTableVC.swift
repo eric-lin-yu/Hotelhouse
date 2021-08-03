@@ -9,7 +9,7 @@ import UIKit
 
 class AboutTableVC: UITableViewController {
     
-    var sectionTitles = ["關於"]
+    var sectionTitles = [NSLocalizedString("about", comment: "")]
     let versions = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") //取得目前版本
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class AboutTableVC: UITableViewController {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCell", for: indexPath) as! DetailIconTextViewCell
             cell.imageView?.image = UIImage(named: "notes")
-            cell.shortTextLabel.text = "目前APP版本：     \(versions ?? "")"
+            cell.shortTextLabel.text = NSLocalizedString("Version", comment: "") + "\(versions ?? "")"
             
             cell.selectionStyle = .none
             
@@ -48,19 +48,19 @@ class AboutTableVC: UITableViewController {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCell", for: indexPath) as! DetailIconTextViewCell
             cell.iconImageView.image = UIImage(systemName: "envelope.circle")?.withTintColor(.orange,renderingMode: .alwaysOriginal)
-            cell.shortTextLabel.text = "問題回報"
+            cell.shortTextLabel.text = NSLocalizedString("Problem Report", comment: "")
             
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AboutCell", for: indexPath) as! DetailIconTextViewCell
             cell.iconImageView.image = UIImage(systemName: "face.smiling")?.withTintColor(.orange,renderingMode: .alwaysOriginal)
-            cell.shortTextLabel.text = "滿意度調查"
+            cell.shortTextLabel.text = NSLocalizedString("Satisfaction adjustment", comment: "")
             
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PrivacyCell", for: indexPath) as! DetailIconTextViewCell
             cell.iconImageView.image = UIImage(systemName: "externaldrive.fill")?.withTintColor(.orange,renderingMode: .alwaysOriginal)
-            cell.shortTextLabel.text = "資料來源 & 版權聲明"
+            cell.shortTextLabel.text = NSLocalizedString("Data Source & Copyright Statement", comment: "")
             
             return cell
 
