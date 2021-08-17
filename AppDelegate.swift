@@ -7,6 +7,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
                 
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("user notifications are allowed")
+            } else {
+                print("user notifications are not allowed")
+            }
+        }
+        
         let image = UIImage()
         UINavigationBar.appearance().setBackgroundImage(image, for: .default)
         UINavigationBar.appearance().shadowImage = image
