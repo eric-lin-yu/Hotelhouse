@@ -36,9 +36,6 @@ struct Infos: Codable {
     }
 }
 struct Info: Codable, Equatable {
-    static func == (lhs: Info, rhs: Info) -> Bool {
-        return lhs.id == rhs.id
-    }
     var id: String
     var name: String
     var infoDescription: String
@@ -64,8 +61,12 @@ struct Info: Codable, Equatable {
         case py = "Py"
         case spec = "Spec"
     }
-    
-
-
 }
+
+extension Info {
+    static func == (lhs: Info, rhs: Info) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 
