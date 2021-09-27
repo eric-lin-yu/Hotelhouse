@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
                 
+        //通知設定
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if granted {
                 print("user notifications are allowed")
@@ -22,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("user notifications are not allowed")
             }
         }
+        
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("Hotel recommendation", comment: "")
+        content.subtitle = NSLocalizedString("Try new hotel today", comment: "")
+        content.body = NSLocalizedString("Come query it", comment: "")
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let request = UNNotificationRequest(identifier: "camping", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
         
         let image = UIImage()
         UINavigationBar.appearance().setBackgroundImage(image, for: .default)
